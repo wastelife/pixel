@@ -1,0 +1,339 @@
+{{extend 'main.html'}}
+<link rel="stylesheet" href="{{=URL('static', 'css/shares.css')}}"/>
+
+<!-- New Share Button -->
+<div class="fixed-action-btn" style="bottom: 80px; right: 24px;">
+    <a class="btn-floating btn-large red modal-trigger" href="#modal1">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+</div>
+<!-- End New Share Button -->
+
+<!-- To Top Button -->
+<div id="to-top" class="fixed-action-btn" style="bottom: 15px; right: 24px;">
+    <a class="btn-floating btn-large teal lighten-1">
+      <i class="large material-icons">publish</i>
+    </a>
+</div>
+<!-- End Top Top Button -->
+
+<!-- Create Share Modal Structure -->
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>New Share</h4>
+      <p>Create your new share here.</p>
+        <form id="share-form" method="post">
+            <div class="row">
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Picture</span>
+                        <input id="share-picture" type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Upload your picture file">
+                    </div>
+                    <div id="share-picture-info"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">label_outline</i>
+                  <input id="title" type="text" class="validate" length="10" name="title">
+                  <label id="title-label" for="title">Title</label>
+                    <div id="title-info"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">label_outline</i>
+                  <textarea id="information" type="text" class="materialize-textarea" length="100" name="information"></textarea>
+                  <label id="information-label" for="information">Information</label>
+                    <div id="information-info"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
+      <a id="share-form-create" href="#!" class="waves-effect waves-green btn-flat ">Create</a>
+    </div>
+</div>
+<!-- End Create Share Modal Structure -->
+
+<div class="row"></div>
+<div id="target" class="row"></div>
+<div class="container row center-align">
+    <a id="load-more" class="col s12 white waves-effect btn-large btn-flat">Load More</a>
+</div>
+
+<script id="template" type="text/ractive">
+<!-- Messages Modal Structure -->
+<div id="modal2" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h5>Messages</h5>
+      <div class="row">
+          <!-- Messages Form -->
+      <form id="message-form" method="post">
+        <input id="message" type="text" class="validate" name="message_content">
+        <div id="message-info"></div>
+      </form>
+          <!-- End Messages Form -->
+          <button on-click="create-message" class="btn waves-effect waves-light">Submit
+        <i class="material-icons right">send</i>
+        </button>
+      <ul class="collection">
+          {% #each messages %}
+          <li class="collection-item avatar">
+            {% #if avatar!=null && avatar.length > 0 %}
+              <img src="{% url %}{% avatar %}" class="circle" on-click="view_profile" data-author="{% author %}">
+            {% else %}
+              <img src="{% default_url %}" class="circle" on-click="view_profile" data-author="{% author %}">
+            {% /if %}
+            <span class="title">{% first_name %} {% last_name %}</span>
+            <p style="word-break:break-all; white-space:normal;">{% message_content %}</p>
+          </li>
+          {% /each %}
+      </ul>
+      </div>
+    </div>
+</div>
+<!-- End Messages Modal Structure -->
+<div id="container" style="margin: auto">
+{% #each shares as items%}
+{% #each items as item%}
+<div class="card" style="float: left; width: 260px; margin: 10px;">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{% url %}{% picture %}">
+    </div>
+    <div class="card-content">
+      <span style="word-break:break-all; white-space:normal;" class="card-title activator grey-text text-darken-4">{% title %}<i class="material-icons right">more_vert</i></span>
+      <p><a on-click="messages" data-share_id="{% id %}">Messages</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">More Information<i class="material-icons right">close</i></span>
+      <p style="word-break:break-all; white-space:normal;">Shared by {% first_name %} {% last_name %}</p>
+      <p style="word-break:break-all; white-space:normal;">{% information %}<p>
+    </div>
+</div>
+{% /each %}
+{% /each %}
+</div>
+
+</script>
+
+
+<script>
+$(document).ready(function(){
+    $(".button-collapse").sideNav();
+    $("#shares_nav").addClass("active");
+    $("#people_nav").removeClass("active");
+    $('.modal-trigger').leanModal();
+    $('.title').characterCounter();
+    $('.information').characterCounter();
+
+    var ractive = new Ractive({
+        el: '#target',
+        template: '#template',
+        delimiters: ['{%', '%}'],
+        tripleDelimiters: ['{%%', '%%}'],
+        data: {
+            shares: [],
+            url: "{{=URL('default', 'download')}}" + '/',
+            default_url: "{{=URL('static', 'images/user-default.jpg')}}",
+            profile_url: "{{=URL('default', 'profile')}}" + '/',
+            messages: [],
+            share_id: '',
+            number: 24,
+        }
+    });
+
+    // When click on an avatar in a message, jump to author's homepage
+    ractive.on("view_profile", function(e) {
+        var user_id = $(e.node).data("author");
+        window.location.href = ractive.get("profile_url") + user_id;
+    });
+
+    function load_messages() {
+        $.ajax("{{=URL('default', 'load_messages', user_signature=True)}}", {
+            method: "POST",
+            data: {
+               share_id: ractive.get('share_id')
+            },
+            success: function(data) {
+                ractive.set('messages', data["messages"]);
+            }
+        });
+    }
+
+    // Read messages
+    ractive.on("messages", function(e) {
+        var share_id = $(e.node).data("share_id");
+        ractive.set('share_id', share_id);
+        // Load messages
+        load_messages();
+        $('#modal2').openModal();
+    });
+
+    // Write a new message
+    ractive.on("create-message",function () {
+        var valid = true;
+        if ($("#message").val().length > 200) {
+            $("#message-info").text("The number of characters should be less than 200.");
+            valid = false;
+        } else if ($("#message").val().length == 0) {
+            $("#message-info").text("The message cannot be empty.");
+            valid = false;
+        }
+        else {
+            $("#message-info").text('');
+            $.ajax("{{=URL('default', 'create_message', user_signature=True)}}", {
+                method: 'POST',
+                data: $("#message-form").serialize() + "&share_id=" + ractive.get('share_id'),
+                success: function () {
+                    load_messages();
+                }
+            });
+        }
+    });
+
+    function load_shares() {
+        var number = ractive.get('number');
+        $.ajax("{{=URL('default', 'load_following', user_signature=True)}}", {
+            method: "POST",
+            data: {
+                number: number,
+                user_id: "{{=user_id}}"
+            },
+            success: function(data) {
+                console.log(data);
+                ractive.set('shares', data["shares"]);
+                var $container = $('#container');
+                $container.imagesLoaded(function(){
+                  $container.masonry({
+                      itemSelector : '.card',
+                      isAnimated: true,
+                      columnWidth : 280,
+                      isFitWidth: true,
+                      containerStyle: {position: 'relative'}
+                  });
+                });
+            }
+        });
+    }
+
+    function reload_shares() {
+        var number = ractive.get('number');
+        $.ajax("{{=URL('default', 'load_following', user_signature=True)}}", {
+            method: "POST",
+            data: {
+                number: number,
+                user_id: "{{=user_id}}"
+            },
+            success: function(data) {
+                ractive.set('shares', data["shares"]);
+                reload();
+            }
+        });
+    }
+
+    // Load shares
+    load_shares();
+
+    function reload() {
+        var $container = $('#container');
+        $container.masonry('reload');
+    }
+
+
+    // Variable to store your files
+    var share_picture;
+    // Add events
+    $('#share-picture').on('change', prepareUpload);
+    // Grab the files and set them to our variable
+    function prepareUpload(event)
+    {
+      share_picture = event.target.files[0];
+    }
+
+
+    $("#share-form-create").click(function (event) {
+        event.stopPropagation(); // Stop stuff happening
+        event.preventDefault(); // Totally stop stuff happening
+
+        // START A LOADING SPINNER HERE
+
+        // Create a formdata object and add the files
+        var formData = new FormData();
+
+        var valid = true;
+        if ($("#title").val().length > 10) {
+            $("#title-info").text("The number of characters should be less than 10.");
+            valid = false;
+        } else {
+            $("#title-info").text('');
+        }
+        if ($("#information").val().length > 100) {
+            $("#information-info").text("The number of characters should be less than 100.");
+            valid = false;
+        } else {
+            $("#information-info").text('');
+        }
+
+        if (share_picture != null) {
+            if (share_picture.type.match(/image\/(jpe?g|png)$/i)) {
+                if (share_picture.size <= 1048576) {
+                    formData.append('title', $("#title").val());
+                    formData.append('information', $("#information").val());
+                    formData.append('picture', share_picture, share_picture.name);
+                    if (valid == true) {
+                       $("#modal1").closeModal();
+                        $.ajax("{{=URL('default', 'create_share', user_signature=True)}}", {
+                            data: formData,
+                            method: "POST",
+                            cache: false,
+                            dataType: 'json',
+                            processData: false, // Don't process the files
+                            contentType: false, // Set content type to false as jQuery will tell the server its a query string request
+                            success: function () {
+                                $("#share-picture-info").text("");
+                                $("#title-info").text('');
+                                $("#information-info").text('');
+                                reload_shares();
+                            },
+                            error: function () {
+
+                            }
+                        });
+                    }
+                    return false;
+                } else {
+                    // Size is too big
+                    $("#share-picture-info").text("Picture file cannot be greater than 1MB.");
+                }
+            } else {
+                // Type is not right
+                $("#share-picture-info").text("Picture file can only be png, jpg/jpeg format.");
+            }
+        } else {
+            // No file selected
+            $("#share-picture-info").text("Picture file cannot be empty.");
+        }
+    });
+    setInterval(reload, 1000);
+
+    // Load More button
+    $("#load-more").click(function() {
+        var number = ractive.get("number");
+        ractive.set("number", number * 2);
+        reload_shares();
+    });
+    
+    // Back to top
+    $("#to-top").click(function(e) {
+        e.preventDefault();
+        $("body").animate({
+            scrollTop: 0
+        }, 700);
+    });
+});
+</script>

@@ -38,6 +38,7 @@ def load_following():
         row = db(db.shares.author==relation.friend).select(orderby=~db.shares.create_time)
         print row
         rows.append(row)
+    
     print rows
     return response.json(dict(shares=rows))
 

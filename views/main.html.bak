@@ -65,7 +65,7 @@
         <li><a href="">Popular</a></li>
         <li class="divider"></li>
         {{if auth.user_id is not None:}}
-        <li><a href="{{=URL('default', 'following')}}">Following</a></li>
+        <li><a href="">Following</a></li>
         {{pass}}
     </ul>
     <div class="navbar-fixed">
