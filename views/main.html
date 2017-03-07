@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{=T.accepted_language or 'en'}}"> <!--<![endif]-->
-  <head>
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="{{=T.accepted_language or 'en'}}">
+<!--<![endif]-->
+
+<head>
     <meta charset="utf-8">
     <!-- www.phpied.com/conditional-comments-block-downloads/ -->
     <!-- Always force latest IE rendering engine
@@ -13,21 +16,21 @@
           initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
           user-scalable = yes allows the user to zoom in -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel</title>
+    <title>Sland</title>
     <!-- http://dev.w3.org/html5/markup/meta.name.html -->
     <meta name="application-name" content="{{=request.application}}">
     <!-- Speaking of Google, don't forget to set your site up:
          http://google.com/webmasters -->
     <meta name="google-site-verification" content="">
     <!-- include stylesheets -->
-    <link rel="stylesheet" href="{{=URL('static','css/myapp.css')}}"/>
-      <link rel="stylesheet" href="{{=URL('static', 'font-awesome-4.4.0/css/font-awesome.min.css')}}"/>
+    <link rel="stylesheet" href="{{=URL('static','css/myapp.css')}}" />
+    <link rel="stylesheet" href="{{=URL('static', 'font-awesome-4.4.0/css/font-awesome.min.css')}}" />
     <link rel="shortcut icon" href="{{=URL('static','images/favicon.ico')}}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{{=URL('static','images/favicon.png')}}">
-      <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="{{=URL('static', 'css/materialize.min.css')}}"  media="screen,projection"/>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{=URL('static', 'css/materialize.min.css')}}" media="screen,projection" />
     <!-- All JavaScript at the bottom, except for Modernizr which enables
          HTML5 elements & feature detects -->
     <script src="{{=URL('static','js/modernizr-2.8.3.min.js')}}"></script>
@@ -35,119 +38,116 @@
         <script src="{{=URL('static','js/respond-1.4.2.min.js')}}"></script>
         <![endif]-->
     <!-- Favicons -->
-    {{include 'web2py_ajax.html'}} <!-- this includes jquery.js, calendar.js/.css and web2py.js -->
+    {{include 'web2py_ajax.html'}}
+    <!-- this includes jquery.js, calendar.js/.css and web2py.js -->
 
-  </head>
-  <body>
-  <!--[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+</head>
+
+<body style="display: flex;min-height: 100vh;flex-direction: column;">
+    <!--[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
     <div class="flash alert alert-dismissable">{{=response.flash or ''}}</div>
     <!-- The javascript =============================== -->
-   <script src="{{=URL('static', 'js/ractive.min.js')}}"></script>
+    <script src="{{=URL('static', 'js/ractive.min.js')}}"></script>
     <script src="{{=URL('static', 'js/materialize.min.js')}}"></script>
     <script src="{{=URL('static', 'js/jquery.masonry.min.js')}}"></script>
 
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
         {{if auth.user_id is not None:}}
-      <li><a href="{{=URL('default', 'profile', args=[auth.user_id])}}">Profile</a></li>
+        <li><a href="{{=URL('default', 'profile', args=[auth.user_id])}}">Profile</a></li>
         {{pass}}
-      <li><a href="{{=URL('default', 'user', args=['change_password'])}}">Setting</a></li>
-      <li class="divider"></li>
-      <li><a href="{{=URL('default', 'user', args=['logout'])}}">Log out</a></li>
+        <li><a href="{{=URL('default', 'user', args=['change_password'])}}">Setting</a></li>
+        <li class="divider"></li>
+        <li><a href="{{=URL('default', 'user', args=['logout'])}}">Log out</a></li>
+    </ul>
+    <ul id="dropdown2" class="dropdown-content">
+        <li><a href="{{=URL('default', 'shares')}}">Recent</a></li>
+        <li><a href="">Popular</a></li>
+        <li class="divider"></li>
+        {{if auth.user_id is not None:}}
+        <li><a href="">Following</a></li>
+        {{pass}}
     </ul>
     <div class="navbar-fixed">
-        <nav class="teal accent-4">
-          <div class="nav-wrapper">
-            <a href="#!" class="brand-logo" style="margin: 0px 0px 0px 10px; font-family: 'Great Vibes', cursive">Pixel</a>
-              {{if auth.user_id is not None:}}
-              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-              {{pass}}
-            <ul class="right hide-on-med-and-down">
+        <nav class="grey darken-4">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo center" style="margin: 0px 0px 0px 10px; font-family: 'Gorge'">PIXEL</a>
                 {{if auth.user_id is not None:}}
-              <li id="shares_nav"><a href="{{=URL('default', 'shares')}}">Shares</a></li>
-              <li id="people_nav"><a href="{{=URL('default', 'people')}}">People</a></li>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 {{pass}}
-              <!-- Dropdown Trigger -->
-                {{if auth.user_id is not None:}}
-              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">{{=auth.user.first_name}} {{=auth.user.last_name}}<i class="material-icons right">arrow_drop_down</i></a></li>
-                {{pass}}
-            </ul>
+                <ul class="left hide-on-med-and-down">
 
-              <ul class="side-nav" id="mobile-demo">
-              <li><a href="{{=URL('default', 'shares')}}">Shares</a></li>
-              <li><a href="{{=URL('default', 'people')}}">People</a></li>
-              {{if auth.user_id is not None:}}
-              <li><a href="{{=URL('default', 'profile', args=[auth.user_id])}}">Profile</a></li>
-              {{pass}}
-                  <li><a href="{{=URL('default', 'user', args=['change_password'])}}">Setting</a></li>
-                  <li class="divider"></li>
-                  <li><a href="{{=URL('default', 'user', args=['logout'])}}">Log out</a></li>
-            </ul>
-          </div>
+                    <li id="shares_nav"><a class="waves-effect waves-light dropdown-button" href="#" data-activates="dropdown2">Shots<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li id="people_nav"><a class="waves-effect waves-light" href="{{=URL('default', 'people')}}">Artists</a></li>
+
+
+                </ul>
+                <ul class="right">
+                    <li>
+                        <form class="grey darken-2">
+                            <div class="input-field ">
+                                <input id="search" type="search" required>
+                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+                    </li>
+                    <!-- Dropdown Trigger -->
+                    {{if auth.user_id is not None:}}
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">{{=auth.user.first_name}} {{=auth.user.last_name}}<i class="material-icons right">arrow_drop_down</i></a></li>
+                    {{pass}}
+                </ul>
+
+
+
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="{{=URL('default', 'shares')}}">Shots</a></li>
+                    <li><a href="{{=URL('default', 'people')}}">Artists</a></li>
+                    {{if auth.user_id is not None:}}
+                    <li><a href="{{=URL('default', 'profile', args=[auth.user_id])}}">Profile</a></li>
+                    {{pass}}
+                    <li><a href="{{=URL('default', 'user', args=['change_password'])}}">Setting</a></li>
+                    <li class="divider"></li>
+                    <li><a href="{{=URL('default', 'user', args=['logout'])}}">Log out</a></li>
+                </ul>
+            </div>
         </nav>
     </div>
 
     <!-- Main ========================================= -->
     <!-- Begin page content -->
-    <div class="container-fluid main-container">
-        {{block center}}
-        {{include}}
-        {{end}}
+    <div class="container-fluid main-container ">
+        {{block center}} {{include}} {{end}}
     </div>
 
     {{block footer}}
-    <footer class="page-footer teal accent-4">
-          <div class="container">
+    <footer class="page-footer grey darken-4">
+        <div class="container">
             <div class="row">
-              <div class="col l8 m8 s12">
-                <h5 class="white-text" style="font-family: 'Trocchi', serif;">Pixel</h5>
-                <p class="grey-text text-lighten-4">Graduate Student, Computer Science<br />
-                    Jack Baskin School of Engineering<br />
-                University of California Santa Cruz</p>
-                  <a class="waves-effect waves-light btn teal lighten-1" href="https://www.soe.ucsc.edu/">Jack Baskin School</a>
-              </div>
-              <div class="col l4 m4 s12">
-                <h5 class="white-text" style="font-family: 'Trocchi', serif;">Contact Info</h5>
-                <ul>
-                  <li>
-                      <span class="fa-stack fa-inverse">
-                      <i class="fa fa-square-o fa-stack-2x"></i>
-                      <i class="fa fa-facebook fa-stack-1x"></i>
-                    </span>
-                      <a class="grey-text text-lighten-3" href="https://www.facebook.com/profile.php?id=100004134017581">Facebook</a>
-                  </li>
-                    <li>
-                        <span class="fa-stack fa-inverse">
-                      <i class="fa fa-square-o fa-stack-2x"></i>
-                      <i class="fa fa-linkedin fa-stack-1x"></i>
-                    </span>
-                        <a class="grey-text text-lighten-3" href="https://www.linkedin.com/in">LinkedIn</a>
-                    </li>
-                  <li>
-                      <span class="fa-stack fa-inverse">
-                      <i class="fa fa-square-o fa-stack-2x"></i>
-                      <i class="fa fa-google-plus-square fa-stack-1x"></i>
-                    </span>
-                      <a class="grey-text text-lighten-3" href="https://plus.google.com/u/0/104477360087380697287/posts">Google+</a>
-                  </li>
-                  <li>
-                      <span class="fa-stack fa-inverse">
-                      <i class="fa fa-square-o fa-stack-2x"></i>
-                      <i class="fa fa-university fa-stack-1x"></i>
-                    </span>
-                      <a class="grey-text text-lighten-3" href="https://www.soe.ucsc.edu/people/roderick">UCSC</a>
-                  </li>
-                </ul>
-              </div>
+                <div class="col l8 m8 s12">
+                    <h5 class="white-text" style="font-family: 'Trocchi', serif;">PIXEL</h5>
+
+                </div>
+                <div class="col l4 m4 s12">
+                    <h5 class="white-text" style="font-family: 'Trocchi', serif;">Contact Info</h5>
+                    <ul>
+                        <li>
+
+                            <a class="grey-text text-lighten-3" href=""></a>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="footer-copyright">
+        </div>
+        <div class="footer-copyright">
             <div class="container">
-            © {{=request.now.year}} Copyright
-            <span class="right">Powered by <a class="grey-text text-lighten-4" href="http://www.web2py.com/">Web2py</a></span>
+                © {{=request.now.year}} Copyright
+                <span class="right">Powered by <a class="grey-text text-lighten-4" href="http://www.web2py.com/">Web2py</a></span>
             </div>
-          </div>
-        </footer>
+        </div>
+    </footer>
     {{end}}
-  </body>
+</body>
+
 </html>
