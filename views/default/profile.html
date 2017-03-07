@@ -1,0 +1,714 @@
+{{extend 'main.html'}}
+
+<!-- To Top Button -->
+<div id="to-top" class="fixed-action-btn" style="bottom: 15px; right: 24px;">
+    <a class="btn-floating btn-large teal lighten-1">
+      <i class="large material-icons">publish</i>
+    </a>
+</div>
+<!-- End Top Top Button -->
+<!-- Page Layout -->
+<!-- Header -->
+<div class=container">
+    <div class="row blue-grey lighten-1 center-align">
+        <div class="col s12"><div><br></div></div>
+        <div class="col s12 center-align">
+            <!-- Modal Trigger -->
+            {{if auth.user_id == user_id:}}
+                <img id="avatar" src="" height="100px" width="100px" class="z-depth-1 modal-trigger0" href="#modal0">
+            {{else:}}
+                <img id="avatar" src="" height="100px" width="100px" class="z-depth-1">
+            {{pass}}
+            <!-- End Modal Trigger -->
+        </div>
+        <div class="col s12 center-align"><h5><span id="first-name"></span> <span id="last-name"></span></h5></div>
+        {{if auth.user_id != user_id:}}
+            <a id="follow" class="waves-effect waves-light grey lighten-1 btn">
+                <i id="follow-label" class="material-icons left"></i><span id="follow-text"></span>
+            </a>
+            <div class="row"></div>
+        {{pass}}
+    </div>
+</div>
+  <!-- Modal Structure -->
+  <div id="modal0" class="modal">
+    <div class="modal-content">
+        <h4>Update Avatar</h4>
+        <!-- Avatar Form -->
+      <form id="avatar-form" method="post">
+        <div class="file-field input-field">
+          <div class="btn">
+            <span>File</span>
+            <input id="avatar-file" type="file">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" placeholder="Upload your avatar file">
+          </div>
+            <div id="avatar-file-info"></div>
+        </div>
+      </form>
+        <!-- End Avatar Form -->
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+        <a id="update-avatar-form" href="#!" class="waves-effect waves-green btn-flat">Update</a>
+    </div>
+  </div>
+<!-- End Modal Structure -->
+<!-- End Header -->
+
+<!-- Tabs -->
+<div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s4"><a href="#test1" class="active">Info</a></li>
+        <li id="shares-tab" class="tab col s4"><a href="#test2">Shares</a></li>
+        <li id="friends-tab" class="tab col s4"><a href="#test3">Follows</a></li>
+      </ul>
+    </div>
+    <div class="row"></div>
+    <!-- Tab1 -->
+    <div id="test1" class="col s10 push-s1">
+        <div class="row"></div>
+        <div class="row"></div>
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header active"><i class="material-icons">perm_identity</i>Introduction</div>
+          <div class="collapsible-body"><p id="introduction-content" style="word-break:break-all; white-space:normal;"></p></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">place</i>Address</div>
+          <div class="collapsible-body"><p id="address-content" style="word-break:break-all; white-space:normal;"></p></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">stay_current_portrait</i>Contact Info</div>
+          <div class="collapsible-body">
+              <p style="word-break:break-all; white-space:normal;">email:  <span id="email-content"></span><br />
+                  tel:  <span id="telephone-content"></span><br />
+              </p>
+          </div>
+        </li>
+      </ul>
+        <!-- Modal Trigger -->
+        {{if auth.user_id == user_id:}}
+      <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Edit</a>
+        {{pass}}
+        <!-- End Modal Trigger -->
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+          <h4>Edit Information</h4>
+
+            <!-- Form -->
+          <div class="row">
+            <form id="edit-form" class="col s12" method="post">
+              <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">input</i>
+                  <textarea id="introduction" class="materialize-textarea" length="200" name="introduction"></textarea>
+                  <label id="introduction-label" class="active" for="introduction">Introduction</label>
+                    <div id="introduction-info"></div>
+                </div>
+              </div>
+                <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">store</i>
+                  <input id="address" type="text" class="validate" length="50" name="address">
+                  <label id="address-label" class="active" for="address">Address</label>
+                    <div id="address-info"></div>
+                </div>
+              </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                      <i class="material-icons prefix">email</i>
+                      <input id="contact_email" type="email" class="validate" name="contact_email">
+                      <label id="contact_email-label" class="active" for="contact_email">Email</label>
+                        <div id="contact_email-info"></div>
+                    </div>
+                </div>
+                <div class="row">
+                 <div class="input-field col s6">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="telephone" type="tel" class="validate" name="telephone">
+                  <label id="telephone-label" class="active" for="telephone">Telephone</label>
+                     <div id="telephone-info"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+            <!-- End Form -->
+
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+            <a id="update-form" href="#!" class="waves-effect waves-green btn-flat">Update</a>
+        </div>
+      </div>
+        <div class="row"></div>
+    </div>
+    <!-- End Modal Structure -->
+    <!-- End Tab1 -->
+
+    <!-- Tab2 -->
+    <div id="test2" class="col s12">
+        <div class="row"></div>
+        <div class="row"></div>
+        <div id="target" class="row"></div>
+        <div class="row"></div>
+        <div class="container row center-align">
+            <a id="load-more" class="col s12 white waves-effect btn-large btn-flat">Load More</a>
+        </div>
+        <!-- Delete Modal Structure -->
+          <div id="modal3" class="modal">
+            <div class="modal-content">
+                {{if auth.user_id == user_id:}}
+              <h4>Are you sure to delete this share?</h4>
+              <p>This is an irreversible operation, so please make sure before actually deleting this share.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+              <a id="actually-delete" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Delete</a>
+            </div>
+              {{else:}}
+              <h4>Sorry.</h4>
+              <p>You are not authorized to delete this share.</p>
+              {{pass}}
+          </div>
+        <!-- End Delete Modal Structure -->
+    </div>
+    <!-- End Tab2 -->
+
+    <!-- Tab3 -->
+    <div id="test3" class="col s12">
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="container">
+            <nav>
+            <div class="nav-wrapper">
+              <form id="search-form">
+                <div class="input-field">
+                  <input id="search" type="search">
+                  <label for="search"><i class="material-icons">search</i></label>
+                  <i class="material-icons">close</i>
+                </div>
+              </form>
+            </div>
+          </nav>
+        </div>
+        <div class="row"></div>
+        <div id="target1" class="container row"></div>
+        <div class="row"></div>
+        <div class="container row center-align">
+            <a id="load-more1" class="col s12 white waves-effect btn-large btn-flat">Load More</a>
+        </div>
+    </div>
+    <!-- End Tab3 -->
+
+</div>
+<!-- End Tab -->
+<!-- End Page Layout -->
+<script id="template" type="text/ractive">
+<!-- Messages Modal Structure -->
+<div id="modal2" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h5>Messages</h5>
+      <div class="row">
+          <!-- Messages Form -->
+      <form id="message-form" method="post">
+        <input id="message" type="text" class="validate" name="message_content">
+        <div id="message-info"></div>
+      </form>
+          <!-- End Messages Form -->
+          <button on-click="create-message" class="btn waves-effect waves-light">Submit
+        <i class="material-icons right">send</i>
+        </button>
+      <ul class="collection">
+          {% #each messages %}
+          <li class="collection-item avatar">
+            {% #if avatar!=null && avatar.length > 0 %}
+              <img src="{% url %}{% avatar %}" class="circle" on-click="view_profile" data-author="{% author %}">
+            {% else %}
+              <img src="{% default_url %}" class="circle" on-click="view_profile" data-author="{% author %}">
+            {% /if %}
+            <span class="title">{% first_name %} {% last_name %}</span>
+            <p style="word-break:break-all; white-space:normal;">{% message_content %}</p>
+          </li>
+          {% /each %}
+      </ul>
+      </div>
+    </div>
+</div>
+<!-- End Messages Modal Structure -->
+<div id="container" style="margin: auto">
+{% #each shares %}
+<div class="card" style="float: left; width: 260px; margin: 10px;">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{% url %}{% picture %}">
+    </div>
+    <div class="card-content">
+      <span style="word-break:break-all; white-space:normal;" class="card-title activator grey-text text-darken-4">{% title %}<i class="material-icons right">more_vert</i></span>
+      <p><a on-click="messages" data-share_id="{% id %}">Messages</a><i on-click="delete" class="material-icons right" data-share_id="{% id %}">delete</i>
+      </p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">More Information<i class="material-icons right">close</i></span>
+      <p style="word-break:break-all; white-space:normal;">Shared by {% first_name %} {% last_name %}</p>
+      <p style="word-break:break-all; white-space:normal;">{% information %}<p>
+    </div>
+</div>
+{% /each %}
+</div>
+</script>
+<script id="template1" type="text/ractive">
+<ul class="collection">
+{% #each people %}
+<li class="collection-item avatar">
+    {% #if avatar!=null && avatar.length > 0 %}
+      <img src="{% url %}{% avatar %}" class="circle" on-click="view_profile" data-user="{% id %}">
+    {% else %}
+      <img src="{% default_url %}" class="circle" on-click="view_profile" data-user="{% id %}">
+    {% /if %}
+    <span class="title">{% first_name %} {% last_name %}</span>
+    <p style="word-break:break-all; white-space:normal;">{% introduction %}</p>
+</li>
+{% /each %}
+</ur>
+</script>
+<script>
+$(document).ready(function() {
+    $(".button-collapse").sideNav();
+    $("#shares_nav").removeClass("active");
+    $("#people_nav").removeClass("active");
+    $('ul.tabs').tabs('select_tab', 'tab_id');
+    $('.modal-trigger0').leanModal();
+    $('.modal-trigger').leanModal(
+            {
+                ready: function () {
+                    $("#introduction-label").addClass("active");
+                    $("#address-label").addClass("active");
+                    $("#contact_email-label").addClass("active");
+                    $("#telephone-label").addClass("active");
+                    $("#introduction").val($("#introduction-content").text());
+                    $("#address").val($("#address-content").text());
+                    $("#contact_email").val($("#email-content").text());
+                    $("#telephone").val($("#telephone-content").text());
+                }
+            }
+    );
+    $('.introduction', '.address').characterCounter();
+
+    $.ajax("{{=URL('default', 'load_profile')}}", {
+        data: {
+            user_id: "{{=user_id}}",
+        },
+        method: "POST",
+        success: function (data) {
+            $("#introduction-content").text(data["profile_dict"]["introduction"]);
+            $("#address-content").text(data["profile_dict"]["address"]);
+            $("#email-content").text(data["profile_dict"]["contact_email"]);
+            $("#telephone-content").text(data["profile_dict"]["telephone"]);
+            $("#first-name").text(data["profile_dict"]["first_name"]);
+            $("#last-name").text(data["profile_dict"]["last_name"]);
+            var url = "";
+            if (data["profile_dict"]["avatar"] != null) {
+                if (data["profile_dict"]["avatar"].length <= 0) {
+                    url = "{{=URL('static', 'images/user-default.jpg')}}";
+                } else {
+                    url = "{{=URL('default', 'download')}}" + '/' + data["profile_dict"]["avatar"];
+                }
+            } else {
+                url = "{{=URL('static', 'images/user-default.jpg')}}";
+            }
+            $("#avatar").attr("src", url);
+        }
+    });
+
+    $("#update-form").click(function () {
+        var valid = true;
+        if ($("#introduction").val().length > 200) {
+            $("#introduction-info").text("The number of characters should be less than 200.");
+            valid = false;
+        } else {
+            $("#introduction-info").text('');
+        }
+        if ($("#address").val().length > 50) {
+            $("#address-info").text("The number of characters should be less than 50.");
+            valid = false;
+        } else {
+            $("#address-info").text('');
+        }
+        if (!$("#contact_email").val().match(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i) &&
+                $("#contact_email").val().length != 0) {
+            $("#contact_email-info").text("This is not a valid email address.");
+            valid = false;
+        } else {
+            $("#contact_email-info").text('');
+        }
+        if (!$("#telephone").val().match(/^\d*$/)) {
+            $("#telephone-info").text("This is not a valid phone number.");
+            valid = false;
+        } else {
+            $("#telephone-info").text('');
+        }
+        if (valid == true) {
+            $("#modal1").closeModal();
+            $.ajax("{{=URL('default', 'update_profile', user_signature=True)}}", {
+                    data: $("#edit-form").serialize() + '&user_id=' + "{{=user_id}}",
+                    method: "POST",
+                    success: function (data) {
+                        $("#introduction-content").text(data["profile_dict"]["introduction"]);
+                        $("#address-content").text(data["profile_dict"]["address"]);
+                        $("#email-content").text(data["profile_dict"]["contact_email"]);
+                        $("#telephone-content").text(data["profile_dict"]["telephone"]);
+                        $("#introduction-info").text('');
+                        $("#address-info").text('');
+                        $("#contact_email-info").text('');
+                        $("#telephone-info").text('');
+                    }
+                }
+            );
+        }
+        return false;
+    });
+
+    // Variable to store your files
+    var avatar_file;
+    // Add events
+    $('#avatar-file').on('change', prepareUpload);
+    // Grab the files and set them to our variable
+    function prepareUpload(event)
+    {
+      avatar_file = event.target.files[0];
+    }
+
+    $("#update-avatar-form").click(function (event) {
+        event.stopPropagation(); // Stop stuff happening
+        event.preventDefault(); // Totally stop stuff happening
+
+        // START A LOADING SPINNER HERE
+
+        // Create a formdata object and add the files
+        var formData = new FormData();
+
+        if (avatar_file != null) {
+            if (avatar_file.type.match(/image\/(jpe?g|png)$/i)) {
+                if (avatar_file.size <= 1048576) {
+                    $("#modal0").closeModal();
+                    formData.append('avatar', avatar_file, avatar_file.name);
+                    $.ajax("{{=URL('default', 'update_avatar', args=[auth.user_id], user_signature=True)}}", {
+                        data: formData,
+                        method: "POST",
+                        cache: false,
+                        dataType: 'json',
+                        processData: false, // Don't process the files
+                        contentType: false, // Set content type to false as jQuery will tell the server its a query string request
+                        success: function (data) {
+                            var url = "{{=URL('default', 'download')}}" + '/' + data["profile_dict"]["avatar"];
+                            $("#avatar").attr("src", url);
+                            $("#avatar-file-info").text('');
+                        }
+                    });
+                    return false;
+                } else {
+                    // Size is too big
+                    $("#avatar-file-info").text("Avatar file cannot be greater than 1MB.");
+                }
+            } else {
+                // Type is not right
+                $("#avatar-file-info").text("Avatar file can only be png, jpg/jpeg format.");
+            }
+        } else {
+            // No file selected
+            $("#avatar-file-info").text("Avatar file cannot be empty.");
+        }
+    });
+
+    // Part 2
+    // Shares **********************************************************************************************************
+    var ractive = new Ractive({
+        el: '#target',
+        template: '#template',
+        delimiters: ['{%', '%}'],
+        tripleDelimiters: ['{%%', '%%}'],
+        data: {
+            shares: [],
+            url: "{{=URL('default', 'download')}}" + '/',
+            default_url: "{{=URL('static', 'images/user-default.jpg')}}",
+            profile_url: "{{=URL('default', 'profile')}}" + '/',
+            messages: [],
+            share_id: '',
+            number: 24,
+        }
+    });
+
+    // When click on an avatar in a message, jump to author's homepage
+    ractive.on("view_profile", function(e) {
+        var user_id = $(e.node).data("author");
+        window.location.href = ractive.get("profile_url") + user_id;
+    });
+
+    function load_messages() {
+        $.ajax("{{=URL('default', 'load_messages', user_signature=True)}}", {
+            method: "POST",
+            data: {
+               share_id: ractive.get('share_id')
+            },
+            success: function(data) {
+                ractive.set('messages', data["messages"]);
+            }
+        });
+    }
+
+    // Read messages
+    ractive.on("messages", function(e) {
+        var share_id = $(e.node).data("share_id");
+        ractive.set('share_id', share_id);
+        // Load messages
+        load_messages();
+        $('#modal2').openModal();
+    });
+
+    // Delete share
+    ractive.on("delete", function(e) {
+        var share_id = $(e.node).data("share_id");
+        ractive.set('share_id', share_id);
+        $('#modal3').openModal();
+    });
+
+    // Actually delete
+    $("#actually-delete").click(function() {
+        $.ajax("{{=URL('default', 'delete_share', user_signature=True)}}", {
+            method: 'POST',
+            data: {
+                share_id: ractive.get('share_id')
+            },
+            success: function() {
+               reload_shares();
+            }
+        });
+    });
+
+
+    // Write a new message
+    ractive.on("create-message",function () {
+        var valid = true;
+        if ($("#message").val().length > 200) {
+            $("#message-info").text("The number of characters should be less than 200.");
+            valid = false;
+        } else if ($("#message").val().length == 0) {
+            $("#message-info").text("The message cannot be empty.");
+            valid = false;
+        }
+        else {
+            $("#message-info").text('');
+            $.ajax("{{=URL('default', 'create_message', user_signature=True)}}", {
+                method: 'POST',
+                data: $("#message-form").serialize() + "&share_id=" + ractive.get('share_id'),
+                success: function () {
+                    load_messages();
+                }
+            });
+        }
+    });
+
+    function load_shares() {
+        var number = ractive.get('number');
+        $.ajax("{{=URL('default', 'self_shares', user_signature=True)}}", {
+            method: "POST",
+            data: {
+                number: number,
+                user_id: "{{=user_id}}"
+            },
+            success: function(data) {
+                ractive.set('shares', data["shares"]);
+                var $container = $('#container');
+                $container.imagesLoaded(function(){
+                  $container.masonry({
+                      itemSelector : '.card',
+                      isAnimated: true,
+                      columnWidth : 280,
+                      isFitWidth: true,
+                      containerStyle: {position: 'relative'}
+                  });
+                });
+            }
+        });
+    }
+
+    function reload_shares() {
+        var number = ractive.get('number');
+        $.ajax("{{=URL('default', 'self_shares', user_signature=True)}}", {
+            method: "POST",
+            data: {
+                number: number,
+                user_id: "{{=user_id}}"
+            },
+            success: function(data) {
+                ractive.set('shares', data["shares"]);
+                reload();
+            }
+        });
+    }
+
+    $("#shares-tab").click(function () {
+        // Load shares
+        load_shares();
+        setInterval(reload, 1000);
+    });
+
+    function reload() {
+        var $container = $('#container');
+        $container.masonry('reload');
+    }
+
+    // Load More button
+    $("#load-more").click(function() {
+        var number = ractive.get("number");
+        ractive.set("number", number * 2);
+        reload_shares();
+    });
+
+    // End Shares ******************************************************************************************************
+
+    // Part 3
+    // Friends *********************************************************************************************************
+    var friends = new Ractive({
+        el: '#target1',
+        template: '#template1',
+        delimiters: ['{%', '%}'],
+        tripleDelimiters: ['{%%', '%%}'],
+        data: {
+            people: [],
+            url: "{{=URL('default', 'download')}}" + '/',
+            default_url: "{{=URL('static', 'images/user-default.jpg')}}",
+            profile_url: "{{=URL('default', 'profile')}}" + '/',
+            number: 6,
+            search: '',
+            flag: false
+        }
+    });
+    function check_friend() {
+        $.ajax("{{=URL('default', 'check_friend', user_signature=True)}}", {
+            method: 'POST',
+            data: {
+                user_id: "{{=user_id}}"
+            },
+            success: function(data) {
+                var flag = data["flag"];
+                friends.set('flag', flag);
+                change_style();
+            }
+        });
+    }
+
+    function change_style() {
+        var flag = friends.get('flag');
+        if (flag==true) {
+            $("#follow-label").text("done");
+            $("#follow-text").text("Stop Follow");
+            $("#follow").removeClass("grey lighten-1").removeClass("red lighten-1").addClass("teal lighten-1");
+        } else {
+            $("#follow-label").text("add");
+            $("#follow-text").text("Follow");
+            $("#follow").removeClass("grey lighten-1").removeClass("teal lighten-1").addClass("red lighten-1");
+        }
+    }
+
+    check_friend();
+
+
+    $("#follow").click(function() {
+        var flag = friends.get('flag');
+        if (flag==true) {
+            delete_friend();
+        } else {
+            add_friend();
+        }
+    });
+
+    function delete_friend() {
+        $.ajax("{{=URL('default', 'delete_friend', user_signature=True)}}", {
+            method: 'POST',
+            data: {
+                user_id: "{{=user_id}}"
+            },
+            success: function(data) {
+                friends.set('flag', false);
+                change_style();
+            }
+        });
+    }
+
+    function add_friend() {
+        $.ajax("{{=URL('default', 'add_friend', user_signature=True)}}", {
+            method: 'POST',
+            data: {
+                user_id: "{{=user_id}}"
+            },
+            success: function(data) {
+                friends.set('flag', true);
+                change_style();
+            }
+        });
+    }
+
+    function load_people() {
+        var number = friends.get('number');
+        var search = friends.get('search');
+        $.ajax("{{=URL('default', 'load_friends', user_signature=True)}}", {
+            method: "POST",
+            data: {
+                number: number,
+                search: search,
+                user_id: "{{=user_id}}"
+            },
+            success: function(data) {
+                friends.set('people', data["people"]);
+            }
+        });
+    }
+
+    $("#friends-tab").click(function () {
+        load_people();
+    });
+
+    friends.on("view_profile", function(e) {
+        var user_id = $(e.node).data("user");
+        window.location.href = friends.get("profile_url") + user_id;
+    });
+
+    $("#search").keypress(function(event) {
+        if (event.which == 13) {
+            event.preventDefault();
+            var search = $(this).val();
+            friends.set('search', search);
+            load_people();
+        }
+    });
+
+    // Load More button
+    $("#load-more1").click(function() {
+        var number = friends.get("number");
+        friends.set("number", number * 2);
+        load_people();
+    });
+
+    // End Friends *****************************************************************************************************
+
+    // Back to top
+    $("#to-top").click(function(e) {
+        e.preventDefault();
+        $("body").animate({
+            scrollTop: 0
+        }, 700);
+    });
+
+});
+</script>
+
+
+
+
+
+
+

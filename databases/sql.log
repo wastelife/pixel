@@ -1,0 +1,98 @@
+timestamp: 2017-03-07T00:14:30.025505
+CREATE TABLE auth_user(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name CHAR(128),
+    last_name CHAR(128),
+    email CHAR(512),
+    password CHAR(512),
+    registration_key CHAR(512),
+    reset_password_key CHAR(512),
+    registration_id CHAR(512)
+);
+success!
+timestamp: 2017-03-07T00:14:30.031782
+CREATE TABLE auth_group(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    role CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2017-03-07T00:14:30.033851
+CREATE TABLE auth_membership(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  ,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE  
+);
+success!
+timestamp: 2017-03-07T00:14:30.036188
+CREATE TABLE auth_permission(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE  ,
+    name CHAR(512),
+    table_name CHAR(512),
+    record_id INTEGER
+);
+success!
+timestamp: 2017-03-07T00:14:30.038647
+CREATE TABLE auth_event(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    time_stamp TIMESTAMP,
+    client_ip CHAR(512),
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  ,
+    origin CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2017-03-07T00:14:30.040733
+CREATE TABLE auth_cas(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE  ,
+    created_on TIMESTAMP,
+    service CHAR(512),
+    ticket CHAR(512),
+    renew CHAR(1)
+);
+success!
+timestamp: 2017-03-07T00:14:30.044896
+CREATE TABLE relation(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id CHAR(512),
+    friend CHAR(512)
+);
+success!
+timestamp: 2017-03-07T00:14:30.047049
+CREATE TABLE shares(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author CHAR(512),
+    title TEXT,
+    information CHAR(512),
+    picture CHAR(512),
+    create_time CHAR(512),
+    first_name CHAR(512),
+    last_name CHAR(512)
+);
+success!
+timestamp: 2017-03-07T00:14:30.049306
+CREATE TABLE messages(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author CHAR(512),
+    message_content CHAR(512),
+    create_time CHAR(512),
+    share_id CHAR(512),
+    first_name CHAR(512),
+    last_name CHAR(512)
+);
+success!
+timestamp: 2017-03-07T00:16:32.147162
+ALTER TABLE auth_user ADD introduction CHAR(512);
+timestamp: 2017-03-07T00:16:32.169809
+ALTER TABLE auth_user ADD telephone CHAR(512);
+timestamp: 2017-03-07T00:16:32.172385
+ALTER TABLE auth_user ADD create_time CHAR(512);
+timestamp: 2017-03-07T00:16:32.174316
+ALTER TABLE auth_user ADD contact_email CHAR(512);
+timestamp: 2017-03-07T00:16:32.176478
+ALTER TABLE auth_user ADD avatar CHAR(512);
+timestamp: 2017-03-07T00:16:32.178576
+ALTER TABLE auth_user ADD address CHAR(512);
+success!

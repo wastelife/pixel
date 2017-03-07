@@ -1,0 +1,118 @@
+{{extend 'main.html'}}
+<link rel="stylesheet" href="{{=URL('static', 'css/people.css')}}"/>
+
+<!-- To Top Button -->
+<div id="to-top" class="fixed-action-btn" style="bottom: 15px; right: 24px;">
+    <a class="btn-floating btn-large teal lighten-1">
+      <i class="large material-icons">publish</i>
+    </a>
+</div>
+<!-- End Top Top Button -->
+
+<div class="row"></div>
+<div class="row"></div>
+<div class="container">
+    <nav>
+    <div class="nav-wrapper">
+      <form id="search-form">
+        <div class="input-field">
+          <input id="search" type="search">
+          <label for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
+</div>
+<div class="row"></div>
+<div id="target" class="container row"></div>
+<div class="container row center-align">
+    <a id="load-more" class="col s12 white waves-effect btn-large btn-flat">Load More</a>
+</div>
+
+<script id="template" type="text/ractive">
+<ul class="collection">
+{% #each people %}
+<li class="collection-item avatar">
+    {% #if avatar!=null && avatar.length > 0 %}
+      <img src="{% url %}{% avatar %}" class="circle" on-click="view_profile" data-user="{% id %}">
+    {% else %}
+      <img src="{% default_url %}" class="circle" on-click="view_profile" data-user="{% id %}">
+    {% /if %}
+    <span class="title">{% first_name %} {% last_name %}</span>
+    <p style="word-break:break-all; white-space:normal;">{% introduction %}</p>
+</li>
+{% /each %}
+</ur>
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(".button-collapse").sideNav();
+        $("#shares_nav").removeClass("active");
+        $("#people_nav").addClass("active");
+
+        var ractive = new Ractive({
+            el: '#target',
+            template: '#template',
+            delimiters: ['{%', '%}'],
+            tripleDelimiters: ['{%%', '%%}'],
+            data: {
+                people: [],
+                url: "{{=URL('default', 'download')}}" + '/',
+                default_url: "{{=URL('static', 'images/user-default.jpg')}}",
+                profile_url: "{{=URL('default', 'profile')}}" + '/',
+                number: 6,
+                search: ''
+            }
+        });
+
+        function load_people() {
+            var number = ractive.get('number');
+            var search = ractive.get('search');
+            $.ajax("{{=URL('default', 'load_people', user_signature=True)}}", {
+                method: "POST",
+                data: {
+                    number: number,
+                    search: search
+                },
+                success: function(data) {
+                    ractive.set('people', data["people"]);
+                }
+            });
+        }
+
+        load_people();
+
+        ractive.on("view_profile", function(e) {
+            var user_id = $(e.node).data("user");
+            window.location.href = ractive.get("profile_url") + user_id;
+        });
+
+        // Load More button
+        $("#load-more").click(function() {
+            var number = ractive.get("number");
+            ractive.set("number", number * 2);
+            load_people();
+        });
+
+        // Back to top
+        $("#to-top").click(function(e) {
+            e.preventDefault();
+            $("body").animate({
+                scrollTop: 0
+            }, 700);
+        });
+
+        $("#search").keypress(function(event) {
+            if (event.which == 13) {
+                event.preventDefault();
+                var search = $(this).val();
+                ractive.set('search', search);
+                load_people();
+            }
+        });
+    });
+</script>
+
+
