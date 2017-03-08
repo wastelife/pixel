@@ -32,12 +32,13 @@ def load_following():
     number = int(request.vars.number)
     user_id = long(request.vars.user_id)
     relations = db(db.relation.user_id==user_id).select(orderby=~db.relation.id)
-    print relations[1].friend
+    #rows = db(db.shares.author==relations[2].friend).select(orderby=~db.shares.create_time)
     rows = []
     for relation in relations:
         row = db(db.shares.author==relation.friend).select(orderby=~db.shares.create_time)
         print row
-        rows.append(row)
+        for item in row:
+            rows.append(item)
     print rows
     return response.json(dict(shares=rows))
 
