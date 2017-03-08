@@ -62,7 +62,7 @@
     </ul>
     <ul id="dropdown2" class="dropdown-content">
         <li><a href="{{=URL('default', 'shares')}}">Recent</a></li>
-        <li><a href="">Popular</a></li>
+        <li><a href="shares?sort=popular">Popular</a></li>
         <li class="divider"></li>
         {{if auth.user_id is not None:}}
         <li><a href="">Following</a></li>
