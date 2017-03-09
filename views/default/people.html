@@ -1,10 +1,12 @@
 {{extend 'main.html'}}
-<link rel="stylesheet" href="{{=URL('static', 'css/people.css')}}"/>
+<link rel="stylesheet" href="{{=URL('static', 'css/people.css')}}" />
+
+
 
 <!-- To Top Button -->
 <div id="to-top" class="fixed-action-btn" style="bottom: 15px; right: 24px;">
     <a class="btn-floating btn-large teal lighten-1">
-      <i class="large material-icons">publish</i>
+        <i class="large material-icons">publish</i>
     </a>
 </div>
 <!-- End Top Top Button -->
@@ -13,16 +15,16 @@
 <div class="row"></div>
 <div class="container">
     <nav>
-    <div class="nav-wrapper">
-      <form id="search-form">
-        <div class="input-field">
-          <input id="search" type="search">
-          <label for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
+        <div class="nav-wrapper">
+            <form id="search-form">
+                <div class="input-field">
+                    <input id="search" type="search">
+                    <label for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
         </div>
-      </form>
-    </div>
-  </nav>
+    </nav>
 </div>
 <div class="row"></div>
 <div id="target" class="container row"></div>
@@ -30,27 +32,48 @@
     <a id="load-more" class="col s12 white waves-effect btn-large btn-flat">Load More</a>
 </div>
 
+
+
 <script id="template" type="text/ractive">
-<ul class="collection">
-{% #each people %}
-<li class="collection-item avatar">
-    {% #if avatar!=null && avatar.length > 0 %}
-      <img src="{% url %}{% avatar %}" class="circle" on-click="view_profile" data-user="{% id %}">
-    {% else %}
-      <img src="{% default_url %}" class="circle" on-click="view_profile" data-user="{% id %}">
-    {% /if %}
-    <span class="title">{% first_name %} {% last_name %}</span>
-    <p style="word-break:break-all; white-space:normal;">{% introduction %}</p>
-</li>
-{% /each %}
-</ur>
+
+        {% #each people %}
+        <div class="row collection">
+            <div class="col s2">
+                {% #if avatar!=null && avatar.length > 0 %}
+
+                <img style="margin-top:1em;width:50px" src="{% url %}{% avatar %}" class="circle waves-effect waves-block" on-click="view_profile" data-user="{% id %}"> {% else %}
+                <img style="margin-top:1em;width:50px" src="{% default_url %}" class="circle waves-effect waves-block" on-click="view_profile" data-user="{% id %}"> {% /if %}
+
+                <p class="title">{% first_name %} {% last_name %}</p>
+                <p style="word-break:break-all; white-space:normal;">{% introduction %}</p>
+
+            </div>
+
+
+
+            {% #each shares %}
+            <div class="col s3">
+                <div class="card" style="max-width: 200px; max-height: 200px; margin: 20px 10px 20px 10px;">
+                    <div class="card-image">
+                        <img src="{% url %}{% picture %}">
+                    </div>
+                </div>
+
+                {% /each %}
+            </div>
+
+            {% /each %}
+
+        </div>
 </script>
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function() {
         $(".button-collapse").sideNav();
         $("#shares_nav").removeClass("active");
         $("#people_nav").addClass("active");
+
+
 
         var ractive = new Ractive({
             el: '#target',
@@ -78,11 +101,39 @@
                 },
                 success: function(data) {
                     ractive.set('people', data["people"]);
+                    // ractive.set('peopelshares', data["peopelshares"]);
                 }
             });
         }
 
+        // function load_shares() {
+        //     var number = ractive.get('number');
+        //     $.ajax("{{=URL('default', 'self_shares', user_signature=True, )}}", {
+        //         method: "POST",
+        //         data: {
+        //             number: number,
+        //             user_id: "{{=user_id}}"
+        //         },
+        //         success: function(data) {
+        //             ractive.set('shares', data["shares"]);
+        //             var $container = $('#container');
+        //             $container.imagesLoaded(function() {
+        //                 $container.masonry({
+        //                     itemSelector: '.card',
+        //                     isAnimated: true,
+        //                     columnWidth: 280,
+        //                     isFitWidth: true,
+        //                     containerStyle: {
+        //                         position: 'relative'
+        //                     }
+        //                 });
+        //             });
+        //         }
+        //     });
+        // }
+
         load_people();
+        // load_shares();
 
         ractive.on("view_profile", function(e) {
             var user_id = $(e.node).data("user");
@@ -112,7 +163,12 @@
                 load_people();
             }
         });
+
+
+
+
+
+
+
     });
 </script>
-
-
