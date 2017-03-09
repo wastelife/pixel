@@ -73,28 +73,78 @@ def create_message():
 
 @auth.requires_login()
 def people():
-
-    return dict()
+    user_id = long(auth.user_id)
+    return dict(user_id=user_id)
 
 @auth.requires_login()
 def load_people():
     pattern = request.vars.search.lower()
     number = int(request.vars.number)
+
+
     rows = db(db.auth_user).select(db.auth_user.id,
                                    db.auth_user.first_name,
                                    db.auth_user.last_name,
                                    db.auth_user.introduction,
                                    db.auth_user.avatar,
+                                #  field,
                                    orderby=~db.auth_user.create_time
                                    )
     people = []
     for row in rows:
-        if len(people) < number:
-            string = row.first_name + ' ' + row.last_name
-            string = string.lower()
-            if re.search(pattern, string, flags=0):
-                people.append(row)
+        temp = {}
+        temp['id'] = row.id
+        temp['first_name'] = row.first_name
+        temp['last_name'] = row.last_name
+        temp['introduction'] = row.introduction
+        temp['avatar'] = row.avatar
+        authorshares = db(db.shares.author == row.id).select(limitby=(0, 3))
+        # print authorshares[0].picture
+        # temp['url'] = authorshares[0].url
+        shares = []
+        for eachshare in authorshares:
+            item = {}
+            item['picture'] = eachshare.picture
+            # print item
+            shares.append(item)
+            # print shares
+
+        #         shares.append(eachshare)
+        temp['shares'] = shares
+        # print temp['shares']
+        # print temp
+
+        people.append(temp)
+
+
+
+
+    # people = []
+    # shares = []
+    # peopelshares = [];
+    # for row in rows:
+    #     # share = db(db.shares.author == row.id).selcet().first();
+    #     authorshares = db(db.shares.author == row.id).select()
+    #     for share in authorshares:
+    #         shares.append(share)
+    #     peopelshares.append(shares)
+    #     print peopelshares
+    #     if len(people) < number:
+    #         string = row.first_name + ' ' + row.last_name
+    #         string = string.lower()
+    #         if re.search(pattern, string, flags=0):
+    #             people.append(row)
+    #             # print share
     return response.json(dict(people=people))
+
+@auth.requires_login()
+def artists_shares():
+    user_id = long(request.vars.user_id)
+    number = long(request.vars.number)
+    rows = db(db.shares.author==user_id).select(orderby=~db.shares.create_time)
+    return response.json(dict(shares=rows[:number]))
+
+
 
 @auth.requires_login()
 def profile():
@@ -241,5 +291,3 @@ def call():
     supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv
     """
     return service()
-
-
