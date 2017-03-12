@@ -114,7 +114,13 @@ def load_people():
         # print temp['shares']
         # print temp
 
-        people.append(temp)
+        # people.append(temp)
+        if len(people) < number:
+            string = temp['first_name'] + ' ' + temp['last_name']
+            print string
+            string = string.lower()
+            if re.search(pattern, string, flags=0):
+                people.append(temp)
 
 
 
