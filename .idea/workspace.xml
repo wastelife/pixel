@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="74d6ccc3-ca74-4407-8696-169e0324371a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/storage.sqlite" afterPath="$PROJECT_DIR$/databases/storage.sqlite" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sessions/05a/1bb/127.0.0.1-20a3f002-3630-4173-be23-735d2d6652c4" afterPath="$PROJECT_DIR$/sessions/05a/1bb/127.0.0.1-20a3f002-3630-4173-be23-735d2d6652c4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sessions/064/0f0/127.0.0.1-6b737861-6ee8-463f-84ca-8287cb0ec9b9" afterPath="$PROJECT_DIR$/sessions/064/0f0/127.0.0.1-6b737861-6ee8-463f-84ca-8287cb0ec9b9" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sessions/076/1ae/127.0.0.1-cab31319-5041-4d46-a220-11a2bf07887c" afterPath="$PROJECT_DIR$/sessions/076/1ae/127.0.0.1-cab31319-5041-4d46-a220-11a2bf07887c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sessions/079/194/127.0.0.1-cc5e035b-de86-4266-8633-7459976e5440" afterPath="$PROJECT_DIR$/sessions/079/194/127.0.0.1-cc5e035b-de86-4266-8633-7459976e5440" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sessions/08d/0f5/127.0.0.1-34bd9934-486c-4eed-a56f-ad616ce6634c" afterPath="$PROJECT_DIR$/sessions/08d/0f5/127.0.0.1-34bd9934-486c-4eed-a56f-ad616ce6634c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sessions/0dc/08f/127.0.0.1-d92781d8-7719-40b7-b0c8-2515641b8f53" afterPath="$PROJECT_DIR$/sessions/0dc/08f/127.0.0.1-d92781d8-7719-40b7-b0c8-2515641b8f53" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sessions/142/0bb/127.0.0.1-d6dd3439-52ce-4bac-9069-84abb45f830e" afterPath="$PROJECT_DIR$/sessions/142/0bb/127.0.0.1-d6dd3439-52ce-4bac-9069-84abb45f830e" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sessions/149/001/127.0.0.1-4694877a-1f7c-4752-85cd-6b828f62eff6" afterPath="$PROJECT_DIR$/sessions/149/001/127.0.0.1-4694877a-1f7c-4752-85cd-6b828f62eff6" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sessions/176/094/127.0.0.1-07672181-58d4-404b-9f80-e4342dbba56e" afterPath="$PROJECT_DIR$/sessions/176/094/127.0.0.1-07672181-58d4-404b-9f80-e4342dbba56e" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sessions/1a7/127/127.0.0.1-2d6652b6-4eef-4b02-be69-c1cc18fb2458" afterPath="$PROJECT_DIR$/sessions/1a7/127/127.0.0.1-2d6652b6-4eef-4b02-be69-c1cc18fb2458" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sessions/1b1/0fa/127.0.0.1-ba9814f3-c846-47ce-9d5c-d5e1b6437543" afterPath="$PROJECT_DIR$/sessions/1b1/0fa/127.0.0.1-ba9814f3-c846-47ce-9d5c-d5e1b6437543" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sessions/1b6/0ed/127.0.0.1-db21c6b8-987d-45b7-835f-19d922176633" afterPath="$PROJECT_DIR$/sessions/1b6/0ed/127.0.0.1-db21c6b8-987d-45b7-835f-19d922176633" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.83520984768a0e1d.312e6a7067.jpg" afterPath="$PROJECT_DIR$/uploads/shares.picture.83520984768a0e1d.312e6a7067.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.83acae047a70f44c.32303134303930343134333332395f66544354432e706e67.png" afterPath="$PROJECT_DIR$/uploads/shares.picture.83acae047a70f44c.32303134303930343134333332395f66544354432e706e67.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.89a69d21a441690f.342e6a7067.jpg" afterPath="$PROJECT_DIR$/uploads/shares.picture.89a69d21a441690f.342e6a7067.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.8b144cafef304a2d.342e6a7067.jpg" afterPath="$PROJECT_DIR$/uploads/shares.picture.8b144cafef304a2d.342e6a7067.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.8cdfbfc321d980b6.312e6a7067.jpg" afterPath="$PROJECT_DIR$/uploads/shares.picture.8cdfbfc321d980b6.312e6a7067.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.92dfe17e404558a0.312e6a7067.jpg" afterPath="$PROJECT_DIR$/uploads/shares.picture.92dfe17e404558a0.312e6a7067.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.943cfbb679060a8c.32303134303930343134333332395f66544354432e706e67.png" afterPath="$PROJECT_DIR$/uploads/shares.picture.943cfbb679060a8c.32303134303930343134333332395f66544354432e706e67.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.9b2abd3ed091257f.362e6a7067.jpg" afterPath="$PROJECT_DIR$/uploads/shares.picture.9b2abd3ed091257f.362e6a7067.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.9c4258ce266fafd8.32303134303930343134333332395f66544354432e706e67.png" afterPath="$PROJECT_DIR$/uploads/shares.picture.9c4258ce266fafd8.32303134303930343134333332395f66544354432e706e67.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.a0e1820f8dc2b803.312e6a7067.jpg" afterPath="$PROJECT_DIR$/uploads/shares.picture.a0e1820f8dc2b803.312e6a7067.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.a60e60939c1127e5.312e6a7067.jpg" afterPath="$PROJECT_DIR$/uploads/shares.picture.a60e60939c1127e5.312e6a7067.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.a634d84b30c687cb.32303134303930343134333332395f66544354432e706e67.png" afterPath="$PROJECT_DIR$/uploads/shares.picture.a634d84b30c687cb.32303134303930343134333332395f66544354432e706e67.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.b29f37b072f986a9.38373134363262626a77386577357338673379376f6a323075303075307767352e6a7067.jpg" afterPath="$PROJECT_DIR$/uploads/shares.picture.b29f37b072f986a9.38373134363262626a77386577357338673379376f6a323075303075307767352e6a7067.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.b382edae943be395.312e6a7067.jpg" afterPath="$PROJECT_DIR$/uploads/shares.picture.b382edae943be395.312e6a7067.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.bc693531d4e77fa4.312e6a7067.jpg" afterPath="$PROJECT_DIR$/uploads/shares.picture.bc693531d4e77fa4.312e6a7067.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.be078dc99f9cf526.312e6a7067.jpg" afterPath="$PROJECT_DIR$/uploads/shares.picture.be078dc99f9cf526.312e6a7067.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/shares.picture.bf5f333b010daf70.38373134363262626a77386577357338673379376f6a323075303075307767352e6a7067.jpg" afterPath="$PROJECT_DIR$/uploads/shares.picture.bf5f333b010daf70.38373134363262626a77386577357338673379376f6a323075303075307767352e6a7067.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/default.py" afterPath="$PROJECT_DIR$/controllers/default.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/default.py.bak" afterPath="$PROJECT_DIR$/controllers/default.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_cas.table" afterPath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_cas.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_event.table" afterPath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_event.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_group.table" afterPath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_group.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_membership.table" afterPath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_membership.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_permission.table" afterPath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_permission.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_user.table" afterPath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_user.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_messages.table" afterPath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_messages.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_relation.table" afterPath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_relation.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_shares.table" afterPath="$PROJECT_DIR$/databases/c8b669d15150d7109e5f7ab36744a5b7_shares.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sql.log" afterPath="$PROJECT_DIR$/databases/sql.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.00-14-31.abda435b-158b-4d2f-8436-21286526b3bd" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.00-14-31.abda435b-158b-4d2f-8436-21286526b3bd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-16-12.b9db2539-eca0-4627-bfc3-1fd72c1d620e" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-16-12.b9db2539-eca0-4627-bfc3-1fd72c1d620e" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-16-17.97826f88-82fc-428d-aa4c-5b6658dd495e" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-16-17.97826f88-82fc-428d-aa4c-5b6658dd495e" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-16-19.9b079d58-dace-4387-8e96-f5d6ca33428f" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-16-19.9b079d58-dace-4387-8e96-f5d6ca33428f" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-16-40.33c21db4-7576-445f-8c17-cc05d24d4941" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-16-40.33c21db4-7576-445f-8c17-cc05d24d4941" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-16-44.9d4d194c-486a-4550-b0f0-6bf3560a3314" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-16-44.9d4d194c-486a-4550-b0f0-6bf3560a3314" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-16-48.b9293eb9-fbfa-4083-a505-06544d3cee36" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-16-48.b9293eb9-fbfa-4083-a505-06544d3cee36" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-24-56.bf1ec87a-6d4e-4e3f-833c-764004e50b19" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-24-56.bf1ec87a-6d4e-4e3f-833c-764004e50b19" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-26-00.a5c4760a-b93b-40b9-aae3-f1bdc7139f44" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-26-00.a5c4760a-b93b-40b9-aae3-f1bdc7139f44" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-30-41.aed6bd46-1cdf-41fa-9d96-c9521c4c6dac" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-30-41.aed6bd46-1cdf-41fa-9d96-c9521c4c6dac" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-31-19.68196037-0255-4fd9-891c-4088eaeee258" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-31-19.68196037-0255-4fd9-891c-4088eaeee258" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-31-29.6c5c4b1f-ae4b-4952-a521-7c9ddc4eb57c" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-31-29.6c5c4b1f-ae4b-4952-a521-7c9ddc4eb57c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-31-32.d761ff46-08ca-4b55-a85c-772c70d66921" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-31-32.d761ff46-08ca-4b55-a85c-772c70d66921" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-33-23.7fba4820-ccc6-47a7-b7e9-17a33991fc85" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-33-23.7fba4820-ccc6-47a7-b7e9-17a33991fc85" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-34-37.dc675b96-fb35-4150-b10b-ea05cd6c1e4c" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-34-37.dc675b96-fb35-4150-b10b-ea05cd6c1e4c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-34-54.1bd72f9a-4548-4f59-b34e-a993114679d8" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-34-54.1bd72f9a-4548-4f59-b34e-a993114679d8" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-35-18.d05ac6ff-7455-42a3-845d-4bf6e4aab487" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-35-18.d05ac6ff-7455-42a3-845d-4bf6e4aab487" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-37-05.41e7aefc-9a97-460c-9f44-dd484ddd6070" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-37-05.41e7aefc-9a97-460c-9f44-dd484ddd6070" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-38-36.f272466a-8ce5-42ac-b7a7-b2071bb37bfb" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-38-36.f272466a-8ce5-42ac-b7a7-b2071bb37bfb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-42-58.77944b1c-d37f-43c4-b0b2-1c7992ad809d" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-42-58.77944b1c-d37f-43c4-b0b2-1c7992ad809d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-43-17.8178a0f5-4641-4f83-aac2-26f485b0ff70" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-43-17.8178a0f5-4641-4f83-aac2-26f485b0ff70" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-49-13.af0bf7b6-2598-4db0-a2ce-f6d37a7a04ed" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.12-49-13.af0bf7b6-2598-4db0-a2ce-f6d37a7a04ed" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.13-01-48.c65560a0-3c33-4ab7-892b-077decc868d0" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.13-01-48.c65560a0-3c33-4ab7-892b-077decc868d0" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.13-23-21.a54e8ee5-1335-44ac-8263-b30923fb6e98" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.13-23-21.a54e8ee5-1335-44ac-8263-b30923fb6e98" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.13-23-38.d447fc01-83ed-48a7-9b71-aa5167195237" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.13-23-38.d447fc01-83ed-48a7-9b71-aa5167195237" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.13-23-53.99a4b134-8cb2-4d57-a7b9-5388cb0dd079" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.13-23-53.99a4b134-8cb2-4d57-a7b9-5388cb0dd079" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.13-44-04.de490842-5dfe-4e47-b075-945960f6b94b" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2017-03-07.13-44-04.de490842-5dfe-4e47-b075-945960f6b94b" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/progress.log" afterPath="$PROJECT_DIR$/progress.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default/following.html" afterPath="$PROJECT_DIR$/views/default/following.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default/following.html.bak" afterPath="$PROJECT_DIR$/views/default/following.html.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default/shares.html" afterPath="$PROJECT_DIR$/views/default/shares.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main.html.bak" afterPath="$PROJECT_DIR$/views/main.html.bak" />
+    </list>
+    <ignored path="pixel.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="pixel" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="shares.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/default/shares.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="752">
+              <caret line="339" column="36" selection-start-line="339" selection-start-column="36" selection-end-line="339" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/default.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-706">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tables.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/tables.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="people.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/default/people.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1768">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/views/default/shares.html" />
+        <option value="$PROJECT_DIR$/views/default/people.html" />
+        <option value="$PROJECT_DIR$/views/main.html" />
+        <option value="$PROJECT_DIR$/controllers/default.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1440" />
+    <option name="y" value="-590" />
+    <option name="width" value="1920" />
+    <option name="height" value="1053" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pixel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pixel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pixel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pixel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pixel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pixel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pixel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pixel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pixel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pixel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pixel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pixel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pixel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="pixel" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pixel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pixel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pixel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pixel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pixel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="74d6ccc3-ca74-4407-8696-169e0324371a" name="Default" comment="" />
+      <created>1489339302325</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1489339302325</updated>
+      <workItem from="1489339304236" duration="5816000" />
+      <workItem from="1489359023863" duration="210000" />
+      <workItem from="1489359616168" duration="147000" />
+      <workItem from="1489359870484" duration="6000" />
+      <workItem from="1489359960541" duration="72000" />
+      <workItem from="1489360054498" duration="39000" />
+      <workItem from="1489360282925" duration="2258000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="8548000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1440" y="-590" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123958334" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34960938" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/views/default/shares.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4575">
+          <caret line="305" column="24" selection-start-line="305" selection-start-column="24" selection-end-line="305" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/shares.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4530">
+          <caret line="302" column="27" selection-start-line="302" selection-start-column="27" selection-end-line="302" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/people.html" />
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="114" column="20" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main.html" />
+    <entry file="file://$PROJECT_DIR$/views/default/shares.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4530">
+          <caret line="302" column="27" selection-start-line="302" selection-start-column="27" selection-end-line="302" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/people.html" />
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="114" column="20" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main.html" />
+    <entry file="file://$PROJECT_DIR$/views/default/shares.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4530">
+          <caret line="302" column="27" selection-start-line="302" selection-start-column="27" selection-end-line="302" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/people.html" />
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="114" column="20" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main.html" />
+    <entry file="file://$PROJECT_DIR$/views/default/shares.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4530">
+          <caret line="302" column="27" selection-start-line="302" selection-start-column="27" selection-end-line="302" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/people.html" />
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="114" column="20" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main.html" />
+    <entry file="file://$PROJECT_DIR$/views/default/shares.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4530">
+          <caret line="302" column="27" selection-start-line="302" selection-start-column="27" selection-end-line="302" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/people.html" />
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="114" column="20" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main.html" />
+    <entry file="file://$PROJECT_DIR$/views/default/shares.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4530">
+          <caret line="302" column="27" selection-start-line="302" selection-start-column="27" selection-end-line="302" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/people.html" />
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="114" column="20" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main.html" />
+    <entry file="file://$PROJECT_DIR$/views/main.html" />
+    <entry file="file://$PROJECT_DIR$/models/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1231">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/people.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1768">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/tables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-706">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/shares.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="752">
+          <caret line="339" column="36" selection-start-line="339" selection-start-column="36" selection-end-line="339" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

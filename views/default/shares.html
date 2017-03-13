@@ -141,6 +141,7 @@ $(document).ready(function(){
             messages: [],
             share_id: '',
             number: 24,
+            search: ''
         }
     });
 
@@ -195,10 +196,12 @@ $(document).ready(function(){
 
     function load_shares() {
         var number = ractive.get('number');
+        var search = ractive.get('search');
         $.ajax("{{=URL('default', 'load_shares', user_signature=True)}}", {
             method: "POST",
             data: {
-                number: number
+                number: number,
+                search: search
             },
             success: function(data) {
                 ractive.set('shares', data["shares"]);
@@ -327,6 +330,16 @@ $(document).ready(function(){
         $("body").animate({
             scrollTop: 0
         }, 700);
+    });
+
+    // add search function by ww
+    $("#search").keypress(function(event) {
+            if (event.which == 13) {
+                event.preventDefault();
+                var search = $(this).val();
+                ractive.set('search', search);
+                load_shares();
+            }
     });
 });
 </script>
