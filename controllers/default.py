@@ -50,13 +50,28 @@ def load_following():
 def shares():
     return dict()
 
+@auth.requires_login()
+def popular():
+    return dict()
+
 
 @auth.requires_login()
 def load_shares():
     pattern = request.vars.search.lower()
     number = int(request.vars.number)
     rows = db(db.shares).select(limitby=(0, number), orderby=~db.shares.create_time)
+    shares2 = []
+    for ele in rows:
+        string = ele.title.lower()
+        if re.search(pattern, string, flags=0):
+            shares2.append(ele)
+    return response.json(dict(shares=shares2))
 
+@auth.requires_login()
+def load_shares2():
+    pattern = request.vars.search.lower()
+    number = int(request.vars.number)
+    rows = db(db.shares).select(limitby=(0, number), orderby=~db.shares.votes)
     shares2 = []
     for ele in rows:
         string = ele.title.lower()
