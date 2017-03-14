@@ -312,3 +312,9 @@ def call():
     supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv
     """
     return service()
+
+def vote():
+    shares = db.shares[request.vars.id]
+    new_votes = shares.votes + 1
+    shares.update_record(votes=new_votes)
+    return str(new_votes)
