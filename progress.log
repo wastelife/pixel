@@ -94,3 +94,8 @@
 [2017-03-07 22:08:08] EDIT pixel/controllers/default.py: 1
 [2017-03-07 22:08:44] EDIT pixel/controllers/default.py: 0
 [2017-03-07 22:09:05] EDIT pixel/controllers/default.py: 0
+[2017-03-13 17:10:37] UPLOAD /Users/boyang/Desktop/web2py.app/Contents/Resources/applications/pixel/static/images.thumbsUp.png: 24
+[2017-03-13 17:10:57] DELETE pixel/static/images.thumbsUp.png: -24
+[2017-03-13 17:12:39] UPLOAD /Users/boyang/Desktop/web2py.app/Contents/Resources/applications/pixel/static/thumbsUp.png: 24
+[2017-03-13 17:12:51] DELETE pixel/static/thumbsUp.png: -24
+[2017-03-13 17:13:09] UPLOAD /Users/boyang/Desktop/web2py.app/Contents/Resources/applications/pixel/static/images/thumbsUp.png: 24

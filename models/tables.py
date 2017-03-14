@@ -41,8 +41,10 @@ db.define_table('shares',
                 Field('picture', 'upload'),
                 Field('create_time', default=datetime.utcnow()),
                 Field('first_name', default=''),
-                Field('last_name', default='')
+                Field('last_name', default=''),
+                Field('votes', 'integer', default=0)
 )
+db.shares.votes.writable = False
 db.shares.title.requires=IS_EMPTY_OR(IS_LENGTH(10, error_message='The number of characters should be less than 20.'))
 db.shares.information.requires=IS_EMPTY_OR(IS_LENGTH(100, error_message='The number of characters should be less than 100.'))
 
