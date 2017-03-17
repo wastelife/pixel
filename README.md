@@ -1,8 +1,6 @@
 # Pixel
 <b>-- a place for creativity and imagination.</b>
-## Introduction
 
-Pixel (http://www.pixelweb.com) is a social media website that allows people to post their own shares with pictures and users messaging system.
 ## Use Guide
 
 You can visit its website directly or clone it to your computer and run.
@@ -36,4 +34,4 @@ https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 Web2py: 
 
 http://www.web2py.com
-## Feedback
+
