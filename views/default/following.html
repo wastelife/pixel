@@ -1,6 +1,6 @@
 {{extend 'main.html'}}
 <link rel="stylesheet" href="{{=URL('static', 'css/shares.css')}}"/>
-
+<form><input type="hidden" id="id" name="id" value="" /></form>
 <!-- New Share Button -->
 <div class="fixed-action-btn" style="bottom: 80px; right: 24px;">
     <a class="btn-floating btn-large red modal-trigger" href="#modal1">
@@ -106,6 +106,13 @@
     </div>
     <div class="card-content">
       <span style="word-break:break-all; white-space:normal;" class="card-title activator grey-text text-darken-4">{% title %}<i class="material-icons right">more_vert</i></span>
+      <p>
+        <span id="shares{% id %}">{% votes %}</span>
+        <span onclick="jQuery('#id').val('{% id %}');
+                ajax('{{=URL('default', 'vote')}}', ['id'], 'shares{% id %}');">
+                <img style="width: 20px"src="{{=URL('static','images/thumbsUp.png')}}"/>
+        </span>
+      </p>
       <p><a on-click="messages" data-share_id="{% id %}">Messages</a></p>
     </div>
     <div class="card-reveal">
@@ -325,7 +332,7 @@ $(document).ready(function(){
         ractive.set("number", number * 2);
         reload_shares();
     });
-    
+
     // Back to top
     $("#to-top").click(function(e) {
         e.preventDefault();
