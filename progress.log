@@ -100,3 +100,9 @@
 [2017-03-13 17:12:51] DELETE pixel/static/thumbsUp.png: -24
 [2017-03-13 17:13:09] UPLOAD /Users/boyang/Desktop/web2py.app/Contents/Resources/applications/pixel/static/images/thumbsUp.png: 24
 [2017-03-13 22:19:39] CREATE default/popular.html: 0
+[2017-04-04 14:11:23] EDIT hw41/controllers/default.py: -5
+[2017-04-04 14:13:05] EDIT hw41/views/default/shares.html: -9
+[2017-04-04 14:13:52] EDIT hw41/views/default/shares.html: 9
+[2017-04-04 14:14:54] EDIT hw41/views/default/shares.html: -1
+[2017-04-04 14:15:08] EDIT hw41/views/default/shares.html: 1
+[2017-04-04 14:19:37] EDIT hw41/controllers/default.py: -1

@@ -200,18 +200,13 @@ $(document).ready(function(){
         }
     });
 
-    //search value
-    var search;
-
     function load_shares() {
         var number = ractive.get('number');
-        // var search = ractive.get('search');
-        // search = $('#search').val();
+        var search = ractive.get('search');
         $.ajax("{{=URL('default', 'load_shares', user_signature=True)}}", {
             method: "POST",
             data: {
-                number: number,
-                search: search
+                number: number
             },
             success: function(data) {
                 ractive.set('shares', data["shares"]);
@@ -261,8 +256,6 @@ $(document).ready(function(){
     {
       share_picture = event.target.files[0];
     }
-
-
 
 
     $("#share-form-create").click(function (event) {
@@ -344,13 +337,12 @@ $(document).ready(function(){
         }, 700);
     });
 
-
     // add search function by ww
     $("#search").keypress(function(event) {
             if (event.which == 13) {
                 event.preventDefault();
-                search = $(this).val();
-                // ractive.set('search', search);
+                var search = $(this).val();
+                ractive.set('search', search);
                 load_shares();
             }
     });
